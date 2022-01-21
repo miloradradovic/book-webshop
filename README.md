@@ -7,9 +7,8 @@ Will be deployed using [Kubernetes](https://kubernetes.io/).
 
 Architecture and basic info
 =================
-
 As mentioned, there are 5 microservices that are used to build the application: book-webshop-eureka, book-webshop-api-gateway, book-webshop-auth, book-webshop-catalog and book-webshop-order. MySQL was used for a database (the idea was to create schema per service). Notably, there is a separate git repo for kubernetes scripts. All the business logic services are registered to Spring Cloud Eureka server and use [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign) client to communicate with each other when needed. [Spring Security](https://spring.io/projects/spring-security) with [JWT](https://jwt.io/) were used to secure api endpoints.
-Every microservice git repo has 3 branches - main, develop and test. Test, as the name suggests, is where unit tests are being written. Develop branch has all the code which is to be deployed. Main branch will have the final dockerized and deployed code.
+Every microservice git repo has 2 branches - main, develop. Develop branch has all the code which is to be deployed. Main branch will have the final dockerized and deployed code.
 
 [book-webshop-eureka](https://github.com/miloradradovic/book-webshop-eureka)
 =====================

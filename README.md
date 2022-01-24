@@ -1,14 +1,14 @@
 Introduction
 ============
 
-Book webshop is a Spring Boot application with microservice architecture. It consists of 5 Spring Boot apps which act as separate microservices. They will be explained in the following sections.
+Book webshop is a Spring Boot application with microservice architecture. It consists of 5 Spring Boot apps which act as separate microservices and 1 Angular app which acts as a client. They will be explained in the following sections.
 Application supports display of a book catalog, as well as creating and monitoring orders. 
 Will be deployed using [Kubernetes](https://kubernetes.io/).
 
 Architecture and basic info
 =================
-As mentioned, there are 5 microservices that are used to build the application: book-webshop-eureka, book-webshop-api-gateway, book-webshop-auth, book-webshop-catalog and book-webshop-order. MySQL was used for a database (the idea was to create schema per service). Notably, there is a separate git repo for kubernetes scripts. All the business logic services are registered to Spring Cloud Eureka server and use [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign) client to communicate with each other when needed. [Spring Security](https://spring.io/projects/spring-security) with [JWT](https://jwt.io/) were used to secure api endpoints.
-Every microservice git repo has 2 branches - main, develop. Develop branch has all the code which is to be deployed. Main branch will have the final dockerized and deployed code.
+As mentioned, there are 5 microservices that are used to build the application: book-webshop-eureka, book-webshop-api-gateway, book-webshop-auth, book-webshop-catalog and book-webshop-order. MySQL was used for a database (the idea was to create schema per service), as well as one Angular application which will be used as a client - book-webshop-client. Notably, there is a separate git repo for kubernetes scripts. All the business logic services are registered to Spring Cloud Eureka server and use [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign) client to communicate with each other when needed. [Spring Security](https://spring.io/projects/spring-security) with [JWT](https://jwt.io/) were used to secure api endpoints.
+Every git repo has 2 branches - main, develop. Develop branch has all the code which is to be deployed. Main branch will have the final dockerized and deployed code.
 
 [book-webshop-eureka](https://github.com/miloradradovic/book-webshop-eureka)
 =====================
@@ -29,6 +29,10 @@ Catalog server is a simple spring boot application used for managing webshop's c
 [book-webshop-order](https://github.com/miloradradovic/book-webshop-order)
 ====================
 Order server will act as an order management application. It holds the order information in its database schema. Currently it has functionalities of placing orders, managing their status, basic crud operations as well as order status updating simulation.
+
+[book-webshop-client](https://github.com/miloradradovic/book-webshop-client)
+=====================
+TO BE IMPLEMENTED!
 
 [book-webshop-k8s](https://github.com/miloradradovic/book-webshop-k8s)
 ==================

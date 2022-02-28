@@ -20,7 +20,7 @@ This application uses [Spring Cloud Gateway](https://spring.io/projects/spring-c
 
 [book-webshop-auth](https://github.com/miloradradovic/book-webshop-auth)
 ===================
-Auth server is a spring boot application used for authentication and authorization, as well as user management. It holds information about User entities in its database schema. It supports the functionalities of signing in, registering, jwt token management and crud operations for user entity. Docker image can be found [here](https://hub.docker.com/r/comeee98/book-webshop-auth).
+Auth server is a spring boot application used for authentication and user management. It holds information about User entities in its database schema. It supports the functionalities of signing in, registering, jwt token management and crud operations for user entity. Docker image can be found [here](https://hub.docker.com/r/comeee98/book-webshop-auth).
 
 [book-webshop-catalog](https://github.com/miloradradovic/book-webshop-catalog)
 ======================
